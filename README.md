@@ -7,7 +7,7 @@ Install this extension to get NASA NASA subject terms used to index and retrieve
 ## Installation
 
 From your instance active venv:
-go to the where you cloned the repo:
+go to where you cloned the repo:
 
     pipenv install .
 
