@@ -1,5 +1,6 @@
 """Load raw csv file and clean it up."""
 import csv
+
 from invenio_subjects_nasa.utils import logger
 
 

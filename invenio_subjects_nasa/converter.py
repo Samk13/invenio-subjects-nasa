@@ -26,7 +26,7 @@ def csv_to_yaml(csv_row, schema=nasa_schema):
 
 
 def write_to_disk(yml_arr, output):
-    """Write results to disk
+    """Write results to disk.
 
     Args:
         yml_arr (list): yaml arr

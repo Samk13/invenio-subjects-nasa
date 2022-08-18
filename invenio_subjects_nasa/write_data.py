@@ -3,7 +3,9 @@ from pathlib import Path
 
 
 def write_data(
-    clean_csv, file_name=Path(__file__).parent / "vocabularies/subjects_nasa.csv"
+    clean_csv, file_name=Path(
+        __file__
+    ).parent / "vocabularies/subjects_nasa.csv"
 ):
     """Write data to csv file.
 
