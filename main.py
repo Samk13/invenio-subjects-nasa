@@ -3,7 +3,7 @@ import click
 from invenio_subjects_nasa.converter import csv_to_yaml, write_to_disk
 from invenio_subjects_nasa.load_data import load_data
 
-row_data = "invenio_subjects_nasa/downloads/nasa_xs_test.csv"
+row_data = "invenio_subjects_nasa/downloads/thesaurus-CSV.csv"
 output_yaml = "invenio_subjects_nasa/vocabularies/nasa_thesaurus.yaml"
 
 

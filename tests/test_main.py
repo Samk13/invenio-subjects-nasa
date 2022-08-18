@@ -15,9 +15,7 @@ def test_vocabularies_yaml():
     """Test vocabularies.yaml structure."""
     extensions = [
         ep.load()
-        for ep in pkg_resources.iter_entry_points(
-            "invenio_rdm_records.fixtures"
-        )
+        for ep in pkg_resources.iter_entry_points("invenio_rdm_records.fixtures")
     ]
 
     assert len(extensions) == 1

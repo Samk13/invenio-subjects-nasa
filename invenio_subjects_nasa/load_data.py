@@ -2,6 +2,7 @@
 import csv
 from invenio_subjects_nasa.utils import logger
 
+
 def load_data(raw_csv_data):
     """Load data.
 
@@ -33,4 +34,4 @@ def write_data(clean_csv, file_name):
 def clean_row(r):
     """Strip out unwanted chars."""
     for index in r:
-        return index.replace('"', "").split(',')
+        return index.replace('"', "").split(",")
