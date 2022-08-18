@@ -1,7 +1,7 @@
 import click
-from .converter import csv_to_yaml
-from .load_data import load_data
-from .write_data import write_data
+from invenio_subjects_nasa.converter import csv_to_yaml
+from invenio_subjects_nasa.load_data import load_data
+from invenio_subjects_nasa.write_data import write_data
 
 # row_data = "invenio_subjects_nasa/downloads/thesaurus-CSV.csv"
 row_data = "invenio_subjects_nasa/downloads/nasa_xs_test.csv"
