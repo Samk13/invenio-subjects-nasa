@@ -1,4 +1,5 @@
 import click
+
 from invenio_subjects_nasa.converter import csv_to_yaml
 from invenio_subjects_nasa.load_data import load_data
 from invenio_subjects_nasa.write_data import write_data

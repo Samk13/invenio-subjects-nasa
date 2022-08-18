@@ -1,10 +1,10 @@
 include *.md
 include *.sh
 include *.txt
+include *.py
 include licence
 include .pylintrc
 recursive-include invenio_subjects_nasa *.csv
 recursive-include invenio_subjects_nasa *.py
 recursive-include invenio_subjects_nasa *.yaml
 recursive-include tests *.py
-recursive-include invenio_subjects_nasa *.py

@@ -1,12 +1,15 @@
+"""Load raw csv file and clean it up."""
 import csv
+
 from .utils import logger
 
 
 def load_data(raw_csv_data):
-    """_summary_
+    """Load data.
 
     Args:
-        row_data (csv): row csv file coming from https://www.sti.nasa.gov/nasa-thesaurus/
+        row_data (csv): row csv file coming from
+        https://www.sti.nasa.gov/nasa-thesaurus/
     """
     clean_csv = []
     with open(raw_csv_data, newline="\n", encoding="utf-8") as raw_csv:
@@ -18,7 +21,7 @@ def load_data(raw_csv_data):
 
 
 def write_data(clean_csv, file_name):
-    """write data to csv file
+    """Write data to csv file.
 
     Args:
         clean_csv (list): csv row list
