@@ -1,7 +1,7 @@
 """Load raw csv file and clean it up."""
 import csv
 
-from .utils import logger
+from invenio_subjects_nasa.utils import logger
 
 
 def load_data(raw_csv_data):
@@ -11,13 +11,13 @@ def load_data(raw_csv_data):
         row_data (csv): row csv file coming from
         https://www.sti.nasa.gov/nasa-thesaurus/
     """
-    clean_csv = []
     with open(raw_csv_data, newline="\n", encoding="utf-8") as raw_csv:
         f = csv.reader(raw_csv)
+        # skip header
+        next(f, None)
         for row in f:
-            logger(clean_row(row))
-            clean_csv.append(clean_row(row))
-    return clean_csv
+            logger(row)
+            yield clean_row(row)
 
 
 def write_data(clean_csv, file_name):
@@ -35,4 +35,4 @@ def write_data(clean_csv, file_name):
 def clean_row(r):
     """Strip out unwanted chars."""
     for index in r:
-        return index.replace('"', "")
+        return index.replace('"', "").split(",")
