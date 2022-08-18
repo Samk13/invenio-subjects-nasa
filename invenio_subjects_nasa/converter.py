@@ -9,8 +9,10 @@ from .utils import logger
 
 def generate_id(csv_row):
     """Build id from Key UID Relationship Type and Related UID."""
-    return \
-    f"{csv_row['Key UID']}-{csv_row['Relationship Type']}-{csv_row['Related UID']}"
+    ki = csv_row['Key UID']
+    rt = csv_row['Relationship Type']
+    ru = csv_row['Related UID']
+    return f"{ki}-{rt}-{ru}"
 
 
 def nasa_schema(csv_obj):

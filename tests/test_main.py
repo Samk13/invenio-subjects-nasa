@@ -1,9 +1,7 @@
 """Test subjects extension conforms to subjects extension interface."""
 
-from pathlib import Path
 
 import pkg_resources
-import yaml
 
 from invenio_subjects_nasa import __version__
 
