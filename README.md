@@ -2,14 +2,14 @@
 
 NASA thesaurus subject terms for InvenioRDM
 This package is inspired by [invenio-subjects-mesh](https://github.com/galterlibrary/invenio-subjects-mesh)
-Install this extension to get NASA NASA subject terms used to index and retrieve materials in the STI Repository into your instance.
+Install this extension to get NASA thesaurus subject terms used to index and retrieve materials in the STI Repository into your instance.
 
 ## Installation
 
 From your instance active venv:
 go to where you cloned the repo:
 
-    pipenv install .
+    pipenv install invenio-subjects-nasa==2022.8.18
 
 This will add it to your Pipfile.
 
@@ -40,7 +40,8 @@ please read [Invenio documentation](https://inveniordm.docs.cern.ch/customize/vo
 There is always a room for improvement in this package specially the performance feel free to drop a PR for that.
 TODO:
 - illuminate the step where we wrote the clean csv to disk and make use yield for each row
-- write more tests, etc
+- write more tests
+- improve performance, maybe use Pandas or numpy instead, etc ...
 
 
 ## Future Ideas
