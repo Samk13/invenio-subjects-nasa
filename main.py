@@ -5,10 +5,10 @@ from invenio_subjects_nasa.load_data import load_data
 from invenio_subjects_nasa.write_data import write_data
 
 # row_data = "invenio_subjects_nasa/downloads/thesaurus-CSV.csv"
-row_data = "invenio_subjects_nasa/downloads/nasa_xs_test.csv"
+row_data = "invenio_subjects_nasa/downloads/thesaurus-CSV.csv"
 
-clean_csv_input = "invenio_subjects_nasa/vocabularies/test_xs_nasa.csv"
-output_yaml = "invenio_subjects_nasa/vocabularies/nasa_test_xs_thesaurus.yaml"
+clean_csv_input = "invenio_subjects_nasa/vocabularies/subjects_nasa.csv"
+output_yaml = "invenio_subjects_nasa/vocabularies/nasa_thesaurus.yaml"
 
 
 @click.command()
