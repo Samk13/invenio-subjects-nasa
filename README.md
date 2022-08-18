@@ -39,7 +39,6 @@ please read [Invenio documentation](https://inveniordm.docs.cern.ch/customize/vo
 
 There is always a room for improvement in this package specially the performance feel free to drop a PR for that.
 TODO:
-- illuminate the step where we wrote the clean csv to disk and make use yield for each row
 - write more tests, etc
 
 
