@@ -1,7 +1,7 @@
 # invenio-subjects-nasa
 
 NASA thesaurus subject terms for InvenioRDM
-
+This package is inspired by [invenio-subjects-mesh](https://github.com/galterlibrary/invenio-subjects-mesh)
 Install this extension to get NASA NASA subject terms used to index and retrieve materials in the STI Repository into your instance.
 
 ## Installation
@@ -38,9 +38,12 @@ please read [Invenio documentation](https://inveniordm.docs.cern.ch/customize/vo
 **Note**
 
 There is always a room for improvement in this package specially the performance feel free to drop a PR for that.
+TODO:
+- illuminate the step where we wrote the clean csv to disk and make use yield for each row
+- write more tests, etc
 
 
 ## Future Ideas
 
-- InvenioRDM doesn't have a way to update pre-existing subjects yet. Once there is one, for example we can illuminate the step where we wrote the clean csv to disk etc.
+- InvenioRDM doesn't have a way to update pre-existing subjects yet. Once there is one,
   this package should provide the functionality to update NASA terms.
