@@ -13,17 +13,25 @@ def generate_id(csv_row):
 
 def nasa_schema(csv_obj):
     """Return a dictionary with the schema for Invenio names."""
-    return [
-        {
+    return {
             "id": str(generate_id(csv_obj)),
             "scheme": str(csv_obj[6]), # Related Object Class
             "subject": str(csv_obj[5]), # Related Descriptor
         }
-    ]
 
 
-def csv_to_yaml(csv_row, yaml_file, schema=nasa_schema):
+
+def csv_to_yaml(csv_row, schema=nasa_schema):
     """Convert a csv file to a yaml file¨based on given schema."""
-    with open(yaml_file, "a", encoding="utf-8") as yaml_f:
+    return schema(csv_row)
+
+def write_to_disk(yml_arr, output):
+    """Write results to disk
+
+    Args:
+        yml_arr (list): yaml arr
+        output (string): file path
+    """
+    with open(output, "w", encoding="utf-8") as yaml_f:
         # for row in to_yaml:
-        yaml.dump(schema(csv_row), yaml_f)
+        yaml.dump(yml_arr, yaml_f)

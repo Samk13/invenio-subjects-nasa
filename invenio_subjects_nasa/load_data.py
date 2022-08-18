@@ -1,6 +1,6 @@
 """Load raw csv file and clean it up."""
 import csv
-
+from invenio_subjects_nasa.utils import logger
 
 def load_data(raw_csv_data):
     """Load data.
@@ -14,6 +14,7 @@ def load_data(raw_csv_data):
         # skip header
         next(f, None)
         for row in f:
+            logger(row)
             yield clean_row(row)
 
 
