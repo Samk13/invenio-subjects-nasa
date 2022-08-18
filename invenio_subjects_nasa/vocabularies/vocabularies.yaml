@@ -1,0 +1,7 @@
+subjects:
+  pid-type: sub
+  schemes:
+    - id: NASA Thesaurus
+      data-file: out_yaml_1.yaml
+      name: NASA Thesaurus
+      uri: "https://www.sti.nasa.gov/nasa-thesaurus/"
