@@ -1,10 +1,46 @@
-# Simple CSV to YAML converter
+# invenio-subjects-nasa
 
-## Description
-Simple CSV to YAML converter created for  converting csv list of names to Invenio names vocabularies.
+NASA thesaurus subject terms for InvenioRDM
+
+Install this extension to get NASA NASA subject terms used to index and retrieve materials in the STI Repository into your instance.
+
+## Installation
+
+From your instance active venv:
+go to the where you cloned the repo:
+
+    pipenv install .
+
+This will add it to your Pipfile.
+
+double check by running
+pip freeze
+
+### Versions
+
+This repository follows [calendar versioning](https://calver.org/):
+
+`2021.08.18` is both a valid semantic version and an indicator of the year-month corresponding to the loaded NASA terms.
+
 
 ## Usage
-```console
-python main.py -i path/to/your/input.csv -o path/to/your/output.yaml
-```
-output will be saved to path/to/your/output.yaml and replace the existing file
+
+There are 2 types of users for this package. Maintainers of the package and instance administrators.
+
+### Instance administrators
+
+For instance administrators, after you have installed the extension as per the steps above, you need to run:
+invenio rdm-records fixtures
+invenio-cli run
+
+please read [Invenio documentation](https://inveniordm.docs.cern.ch/customize/vocabularies/subjects/)
+
+**Note**
+
+There is always a room for improvement in this package specially the performance feel free to drop a PR for that.
+
+
+## Future Ideas
+
+- InvenioRDM doesn't have a way to update pre-existing subjects yet. Once there is one,
+  this package should provide the functionality to update NASA terms.
