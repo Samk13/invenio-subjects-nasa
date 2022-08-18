@@ -42,5 +42,5 @@ There is always a room for improvement in this package specially the performance
 
 ## Future Ideas
 
-- InvenioRDM doesn't have a way to update pre-existing subjects yet. Once there is one,
+- InvenioRDM doesn't have a way to update pre-existing subjects yet. Once there is one, for example we can illuminate the step where we wrote the clean csv to disk etc.
   this package should provide the functionality to update NASA terms.
