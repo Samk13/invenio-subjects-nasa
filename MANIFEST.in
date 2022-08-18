@@ -1,0 +1,7 @@
+include *.md
+include *.sh
+include *.txt
+include licence
+recursive-include invenio_subjects_nasa *.csv
+recursive-include invenio_subjects_nasa *.py
+recursive-include invenio_subjects_nasa *.yaml
