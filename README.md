@@ -8,15 +8,19 @@ Install this extension to get NASA thesaurus subject terms used to index and ret
 
 From your instance active venv:
 ```console
-pip install -i https://test.pypi.org/simple/ invenio-subjects-nasa
+pip install invenio-subjects-nasa==1.0.0
 ```
-
 
 This will add it to your Pipfile.
 
 you can double check by running
 ```console
 pip freeze | grep invenio-subjects-nasa
+```
+in your invenio instance run:
+```console
+invenio rdm-records fixtures
+invenio-cli run
 ```
 
 ### Versions
@@ -30,20 +34,15 @@ There are 2 types of users for this package. Maintainers of the package and inst
 
 ### Instance administrators
 
-For instance administrators, after you have installed the extension as per the steps above, you need to run:
-```console
-invenio rdm-records fixtures
-invenio-cli run
-```
-
-please read [Invenio documentation](https://inveniordm.docs.cern.ch/customize/vocabularies/subjects/)
+For instance administrators, after you have installed the extension as per the steps above,
+please read [Invenio subjects documentation](https://inveniordm.docs.cern.ch/customize/vocabularies/subjects/)
 
 **Note**
 
-There is always a room for improvement in this package specially the performance feel free to drop a PR for that.
+There is always a room for improvements specially the performance, feel free to drop a PR for that.
 TODO:
 - write more tests
-- improve performance, maybe use Pandas or numpy instead, etc ...
+- improve performance, maybe using Pandas or numpy instead, etc ...
 
 
 ## Future Ideas
