@@ -8,7 +8,7 @@ Install this extension to get NASA thesaurus subject terms used to index and ret
 
 From your instance active venv:
 ```console
-pip install invenio-subjects-nasa==1.0.0
+pip install invenio-subjects-nasa
 ```
 
 This will add it to your Pipfile.
