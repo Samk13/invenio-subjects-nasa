@@ -22,6 +22,7 @@ in your invenio instance run:
 invenio rdm-records fixtures
 invenio-cli run
 ```
+the above commands could take long time to finish so be patient.
 
 ### Versions
 
