@@ -22,14 +22,14 @@ for reqs in extras_require.values():
 packages = find_packages()
 
 setup(
-    name="invenio_subjects_nasa",
+    name="invenio-subjects-nasa",
     description=__doc__,
     long_description=readme + "\n\n" + history,
     long_description_content_type="text/markdown",
     keywords="invenio inveniordm subjects nasa",
     license="MIT",
-    author="Sam Arbid",
-    author_email="samarbid13@gmail.com",
+    author="KTH Royal Institute of Technology",
+    author_email="info@kth.se",
     url="https://github.com/Samk13/invenio-subjects-nasa",
     packages=packages,
     zip_safe=False,

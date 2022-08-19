@@ -7,20 +7,21 @@ Install this extension to get NASA thesaurus subject terms used to index and ret
 ## Installation
 
 From your instance active venv:
-go to where you cloned the repo:
+```console
+pip install -i https://test.pypi.org/simple/ invenio-subjects-nasa
+```
 
-    pipenv install invenio-subjects-nasa==2022.8.18
 
 This will add it to your Pipfile.
 
-double check by running
-pip freeze
+you can double check by running
+```console
+pip freeze | grep invenio-subjects-nasa
+```
 
 ### Versions
 
-This repository follows [calendar versioning](https://calver.org/):
-
-`2021.08.18` is both a valid semantic version and an indicator of the year-month corresponding to the loaded NASA terms.
+This repository follows [SemVer versioning](https://semver.org/):
 
 
 ## Usage
@@ -30,8 +31,10 @@ There are 2 types of users for this package. Maintainers of the package and inst
 ### Instance administrators
 
 For instance administrators, after you have installed the extension as per the steps above, you need to run:
+```console
 invenio rdm-records fixtures
 invenio-cli run
+```
 
 please read [Invenio documentation](https://inveniordm.docs.cern.ch/customize/vocabularies/subjects/)
 
@@ -39,7 +42,6 @@ please read [Invenio documentation](https://inveniordm.docs.cern.ch/customize/vo
 
 There is always a room for improvement in this package specially the performance feel free to drop a PR for that.
 TODO:
-- illuminate the step where we wrote the clean csv to disk and make use yield for each row
 - write more tests
 - improve performance, maybe use Pandas or numpy instead, etc ...
 
