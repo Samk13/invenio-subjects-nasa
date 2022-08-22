@@ -1,6 +1,6 @@
 # invenio-subjects-nasa
 
-NASA thesaurus subject terms for InvenioRDM
+NASA thesaurus subject terms for [InvenioRDM](https://inveniosoftware.org/products/rdm/)
 This package is inspired by [invenio-subjects-mesh](https://github.com/galterlibrary/invenio-subjects-mesh)
 Install this extension to get NASA thesaurus subject terms used to index and retrieve materials in the STI Repository into your instance.
 
