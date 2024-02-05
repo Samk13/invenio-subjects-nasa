@@ -1,3 +1,10 @@
+# -*- coding: utf-8 -*-
+#
+# Copyright (C) 2022-2024 KTH Royal Institute of Technology.
+#
+# invenio-subjects-nasa is free software, you can redistribute it and/or
+# modify it under the terms of the MIT License; see LICENSE file details.
+
 """Load raw csv file and clean it up."""
 import ast
 
@@ -13,4 +20,4 @@ def load_data(raw_csv_data):
         # skip header
         next(raw_csv, None)
         for row in raw_csv:
-            yield ast.literal_eval(row).split(',')
+            yield ast.literal_eval(row).split(",")

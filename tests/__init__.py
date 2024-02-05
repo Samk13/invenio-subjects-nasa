@@ -5,6 +5,4 @@
 # invenio-subjects-nasa is free software, you can redistribute it and/or
 # modify it under the terms of the MIT License; see LICENSE file details.
 
-"""Nasa thesaurus subject terms for InvenioRDM."""
-
-__version__ = "1.1.2"
+"""tests for the invenio_subjects_nasa module."""
