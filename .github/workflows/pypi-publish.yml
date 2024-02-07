@@ -21,5 +21,7 @@ jobs:
       id-token: write
     steps:
 
-    - name: Publish package distributions to PyPI
+    - name: Publish package to PyPI
       uses: pypa/gh-action-pypi-publish@release/v1
+    with:
+      password: ${{ secrets.NASA_SUBJECTS_PYPI_API_TOKEN }}
