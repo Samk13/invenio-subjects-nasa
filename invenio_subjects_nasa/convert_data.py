@@ -99,15 +99,9 @@ def write_to_yaml(data: list, filepath: str):
         yaml.dump(data, file)
 
 
-def main(csv_filepath: str, yaml_filepath: str):
+def main(csv_filepath_input: str, yaml_filepath_output: str):
     """Main function to process CSV data and write it to a YAML file."""
-    data = load_csv_data(csv_filepath)
+    data = load_csv_data(csv_filepath_input)
     transformed_data = [transform_row_to_schema(row) for row in data]
     unique_data = remove_duplicates(transformed_data)
-    write_to_yaml(unique_data, yaml_filepath)
-
-
-if __name__ == "__main__":
-    csv_file_path = "invenio_subjects_nasa/downloads/thesaurus-CSV-2024-02-05.csv"
-    yaml_file_path = "invenio_subjects_nasa/vocabularies/nasa_thesaurus.yaml"
-    main(csv_file_path, yaml_file_path)
+    write_to_yaml(unique_data, yaml_filepath_output)
