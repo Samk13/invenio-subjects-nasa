@@ -85,7 +85,8 @@ def remove_duplicates(data: list):
             seen.add(item["subject"])
             unique_data.append(item)
         # logger.debug("%s is a duplicate", item["subject"])
-    return unique_data
+    sorted_unique_data = sorted(unique_data, key=lambda x: x["subject"])
+    return sorted_unique_data
 
 
 def write_to_yaml(data: list, filepath: str):
@@ -105,8 +106,8 @@ def main(csv_filepath: str, yaml_filepath: str):
 
 
 if __name__ == "__main__":
-    csv_file_path = "invenio_subjects_nasa/downloads/thesaurus-CSV.csv"
-    yaml_file_path = "invenio_subjects_nasa/vocabularies/test3-nasa_thesaurus.yaml"
+    csv_file_path = "invenio_subjects_nasa/downloads/thesaurus-CSV-2024-02-05.csv"
+    yaml_file_path = "invenio_subjects_nasa/vocabularies/nasa_thesaurus.yaml"
     main(csv_file_path, yaml_file_path)
 
 
