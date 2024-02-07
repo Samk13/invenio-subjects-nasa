@@ -1,5 +1,10 @@
 # Changes
 
+v2.0.2 (released 2024-02-07)
+
+- Fix pypi deployment
+- Update README.md
+
 v2.0.0 (released 2024-02-07)
 
 - Add GitHub actions for tests and pypi deployment
