@@ -7,6 +7,7 @@ include .pylintrc
 include .vscode/settings.json
 include Makefile
 recursive-include tests
+recursive-include dist *.gz
 recursive-include tests *.csv
 recursive-include tests *.yaml
 recursive-include invenio_subjects_nasa *.csv
