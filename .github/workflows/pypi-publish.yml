@@ -20,8 +20,14 @@ jobs:
     permissions:
       id-token: write
     steps:
-
+    - name: Checkout
+      uses: actions/checkout@v4
+    - name: Install dependencies
+      run: |
+        pip install twine
+        pip freeze
+    - name: Run package build
+      run: |
+        python setup.py sdist
     - name: Publish package to PyPI
       uses: pypa/gh-action-pypi-publish@release/v1
-      with:
-        password: ${{ secrets.NASA_SUBJECTS_PYPI_API_TOKEN }}
