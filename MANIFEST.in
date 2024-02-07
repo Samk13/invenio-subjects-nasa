@@ -4,7 +4,9 @@ include *.txt
 include *.py
 include licence
 include .pylintrc
+include .vscode/settings.json
+include Makefile
+recursive-include tests
 recursive-include invenio_subjects_nasa *.csv
 recursive-include invenio_subjects_nasa *.py
 recursive-include invenio_subjects_nasa *.yaml
-recursive-include tests *.py
