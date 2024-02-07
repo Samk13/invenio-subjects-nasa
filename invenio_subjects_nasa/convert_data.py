@@ -80,12 +80,14 @@ def remove_duplicates(data: list):
     logger.debug("Removing duplicate entries...")
     seen = set()
     unique_data = []
+
     for item in data:
         if item["subject"] not in seen:
             seen.add(item["subject"])
             unique_data.append(item)
         # logger.debug("%s is a duplicate", item["subject"])
-    sorted_unique_data = sorted(unique_data, key=lambda x: x["subject"])
+
+    sorted_unique_data = sorted(unique_data, key=lambda x: x["id"])
     return sorted_unique_data
 
 
