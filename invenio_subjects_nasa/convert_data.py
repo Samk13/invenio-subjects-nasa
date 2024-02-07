@@ -19,7 +19,7 @@ def load_csv_data(filepath: str):
         with open(filepath, newline="\n", encoding="utf-8") as file:
             reader = csv.reader(file)
 
-            # Safely skip the header row
+            # Skip the header row
             try:
                 next(reader)
 
@@ -46,7 +46,7 @@ def load_csv_data(filepath: str):
 def parse_single_string_row(row: str):
     """Parse a single string row from CSV into a tuple.
 
-    # row = '64538,"2001 Mars Odyssey","NASA Thesaurus","BT","55662","Mars missions","NASA Thesaurus"'
+    row = '64538,"2001 Mars Odyssey","NASA Thesaurus","BT","55662","Mars missions","NASA Thesaurus"'
     """
     # Use StringIO to simulate a file-like object because csv.reader expects a file-like object
     reader = csv.reader(StringIO(row), quotechar='"', delimiter=",")
@@ -111,7 +111,3 @@ if __name__ == "__main__":
     csv_file_path = "invenio_subjects_nasa/downloads/thesaurus-CSV-2024-02-05.csv"
     yaml_file_path = "invenio_subjects_nasa/vocabularies/nasa_thesaurus.yaml"
     main(csv_file_path, yaml_file_path)
-
-
-# 481.111 line result (before removing duplicates)
-#  67.866 line result
