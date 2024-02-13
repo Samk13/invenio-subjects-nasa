@@ -1,6 +1,7 @@
 # invenio-subjects-nasa
 
 ![Tests](https://github.com/Samk13/invenio-subjects-nasa/actions/workflows/tests.yml/badge.svg)
+![Pypi](https://img.shields.io/pypi/v/invenio-subjects-nasa.svg)
 
 The NASA Thesaurus contains the authorized NASA subject terms used to index and retrieve materials in the STI Repository launch . The scope of this controlled vocabulary includes not only aerospace engineering, but all supporting areas of engineering and physics, the natural space sciences (astronomy, astrophysics, and planetary science), Earth sciences, and the biological sciences. The NASA Thesaurus contains over 18,400 subject terms, 4,300 definitions, and more than 4,500 USE cross references.
 
