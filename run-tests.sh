@@ -26,6 +26,11 @@ done
 
 # Note: check_manifest is still incredibly slow! (w/ 12.86s and w/o 1.51s)
 python -m check_manifest --no-build-isolation
+
+echo "Running code quality checks with ruff..."
+python -m ruff check .
+python -m ruff format --check .
+
 # Note: expansion of pytest_args looks like below to not cause an unbound
 # variable error when 1) "nounset" and 2) the array is empty.
 python -m pytest ${pytest_args[@]}
