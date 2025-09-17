@@ -40,7 +40,6 @@ tests = [
     "PyYAML>=6.0.1",
     "wheel>=0.42.0",
     "ruff>=0.1.0",
-    "check-manifest>=0.49",
 ]
 
 [project.scripts]

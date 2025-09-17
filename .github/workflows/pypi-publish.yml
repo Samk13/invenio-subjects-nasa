@@ -36,8 +36,8 @@ jobs:
         python-version: "3.12"
         enable-cache: true
     - name: Build package
-      run: rm -rf dist && uvx pyproject-build
+      run: rm -rf dist && uvx --from build pyproject-build
     - name: Check package metadata
-      run: uvx twine check dist/*
+      run: uvx --from twine twine check dist/*
     - name: Publish package to PyPI
       uses: pypa/gh-action-pypi-publish@release/v1

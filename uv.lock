@@ -321,7 +321,6 @@ source = { editable = "." }
 
 [package.optional-dependencies]
 tests = [
-    { name = "check-manifest" },
     { name = "pytest" },
     { name = "pytest-invenio" },
     { name = "pyyaml" },
@@ -331,7 +330,6 @@ tests = [
 
 [package.metadata]
 requires-dist = [
-    { name = "check-manifest", marker = "extra == 'tests'", specifier = ">=0.49" },
     { name = "pytest", marker = "extra == 'tests'", specifier = ">=7.0.0" },
     { name = "pytest-invenio", marker = "extra == 'tests'", specifier = ">=2.1.7" },
     { name = "pyyaml", marker = "extra == 'tests'", specifier = ">=6.0.1" },
