@@ -53,7 +53,7 @@ def parse_single_string_row(row: str):
 
     for parsed_row in reader:
         # parsed_row = ['64538', '2001 Mars Odyssey', 'NASA Thesaurus', 'BT', '55662', 'Mars missions', 'NASA Thesaurus']
-        if not len(parsed_row) == 7:
+        if len(parsed_row) != 7:
             logger.debug("Row length is not 7: '%s'", parsed_row)
         yield tuple(parsed_row)
         return  # Ensures the function exits after yielding

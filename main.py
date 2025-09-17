@@ -3,7 +3,7 @@
 #
 # invenio-subjects-nasa is free software, you can redistribute it and/or
 # modify it under the terms of the MIT License; see LICENSE file details.
-"""Nasa subject terms for InvenioRDM"""
+"""Nasa subject terms for InvenioRDM."""
 
 from invenio_subjects_nasa.config import (
     nasa_subjects_csv_input_path,

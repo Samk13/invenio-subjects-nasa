@@ -1,4 +1,3 @@
-
 # Copyright (C) 2022-2024 KTH Royal Institute of Technology.
 #
 # invenio-subjects-nasa is free software, you can redistribute it and/or
