@@ -9,7 +9,7 @@ def test_nasa_subjects_csv_input_path():
         Path.cwd()
         / "invenio_subjects_nasa"
         / "downloads"
-        / "thesaurus-CSV-2024-02-05.csv"
+        / config.NASA_THESAURUS_CSV_FILENAME
     )
 
 
