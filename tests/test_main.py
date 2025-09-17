@@ -5,7 +5,7 @@
 
 """Test subjects extension conforms to subjects extension interface."""
 
-import pkg_resources
+from importlib import metadata
 
 from invenio_subjects_nasa import __version__
 
@@ -17,9 +17,12 @@ def test_version():
 
 def test_vocabularies_yaml():
     """Test vocabularies.yaml structure."""
-    extensions = [
-        ep.load()
-        for ep in pkg_resources.iter_entry_points("invenio_rdm_records.fixtures")
-    ]
+    entry_points = metadata.entry_points()
+    if hasattr(entry_points, "select"):
+        fixtures_eps = entry_points.select(group="invenio_rdm_records.fixtures")
+    else:  # Python < 3.10 returns a dict
+        fixtures_eps = entry_points.get("invenio_rdm_records.fixtures", [])
+
+    extensions = [ep.load() for ep in fixtures_eps]
 
     assert len(extensions) == 1
