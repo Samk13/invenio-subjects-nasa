@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 #
 # Copyright (C) 2022-2024 KTH Royal Institute of Technology.
 #
@@ -6,6 +5,7 @@
 # modify it under the terms of the MIT License; see LICENSE file details.
 
 """Utils for logging info to console."""
+
 import logging
 import os
 

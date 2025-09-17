@@ -32,7 +32,6 @@ def check_yaml_schema(data):
 
 def test_convert_csv_to_yaml():
     """Test convert CSV to yaml."""
-
     yaml_file_path = "tests/test_data/output_test.yaml"
     input_test = "tests/test_data/input_test.csv"
     data = load_csv_data(input_test)
@@ -40,13 +39,13 @@ def test_convert_csv_to_yaml():
     unique_data = remove_duplicates(transformed_data)
     # write_to_yaml(unique_data, yaml_file_path)
     # open the file and check the content
-    with open(input_test, "r", encoding="utf-8") as csv_file:
+    with open(input_test, encoding="utf-8") as csv_file:
         csv_data = csv.reader(csv_file)
         assert csv_data
         # assert that the csv file has 10 rows
         assert len(list(csv_data)) == 10
 
-    with open(yaml_file_path, "r", encoding="utf-8") as file:
+    with open(yaml_file_path, encoding="utf-8") as file:
         yaml_data = yaml.safe_load(file)
         assert yaml_data
         # duplicate data and header should be removed

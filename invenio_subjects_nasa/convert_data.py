@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 #
 # Copyright (C) 2022-2024 KTH Royal Institute of Technology.
 #
@@ -35,7 +34,7 @@ def load_csv_data(filepath: str):
             for row in reader:
                 yield from parse_single_string_row(row[0])
                 # yield tuple(row[0].replace('"', '').split(','))
-    except IOError as io_err:
+    except OSError as io_err:
         # Handle file access errors (e.g., file not found, permission denied)
         logger.debug("File access error: '%s'", io_err)
     except csv.Error as csv_err:

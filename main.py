@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 #
 # Copyright (C) 2022-2024 KTH Royal Institute of Technology.
 #
@@ -14,7 +13,6 @@ from invenio_subjects_nasa.convert_data import main
 from invenio_subjects_nasa.utils import logger
 
 if __name__ == "__main__":
-
     logger.debug("Converting ...")
     main(nasa_subjects_csv_input_path, nasa_subjects_yaml_output_path)
     logger.debug("Subjects is been converted successfully!")
