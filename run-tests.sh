@@ -26,7 +26,8 @@ done
 
 
 # Note: check_manifest is still incredibly slow! (w/ 12.86s and w/o 1.51s)
-python -m check_manifest --no-build-isolation
+# Keep build isolation so the hatchling backend is resolved automatically.
+python -m check_manifest
 
 echo "Running code quality checks with ruff..."
 python -m ruff check .
