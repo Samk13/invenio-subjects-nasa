@@ -1,3 +1,10 @@
+# -*- coding: utf-8 -*-
+#
+# Copyright (C) 2022-2025 KTH Royal Institute of Technology.
+#
+# invenio-subjects-nasa is free software, you can redistribute it and/or
+# modify it under the terms of the MIT License; see LICENSE file details.
+
 name: PyPI Publish
 
 on:
@@ -21,7 +28,7 @@ jobs:
       id-token: write
     steps:
     - name: Checkout
-      uses: actions/checkout@v4
+      uses: actions/checkout@v5
     - name: Install dependencies
       run: |
         pip install twine
