@@ -1,3 +1,4 @@
+#!/usr/bin/env bash
 # -*- coding: utf-8 -*-
 #
 # Copyright (C) 2022-2024 KTH Royal Institute of Technology.
@@ -24,10 +25,22 @@ for arg in $@; do
 done
 
 
-# Note: check_manifest is still incredibly slow! (w/ 12.86s and w/o 1.51s)
-python -m check_manifest --no-build-isolation
-# Note: expansion of pytest_args looks like below to not cause an unbound
-# variable error when 1) "nounset" and 2) the array is empty.
-python -m pytest ${pytest_args[@]}
-tests_exit_code=$?
-exit "$tests_exit_code"
+echo "Validating packaging metadata with an isolated build..."
+tmp_build_dir=$(mktemp -d)
+cleanup() {
+    rm -rf "${tmp_build_dir}"
+}
+trap cleanup EXIT
+uvx --from build pyproject-build --sdist --wheel --outdir "${tmp_build_dir}"
+trap - EXIT
+cleanup
+
+echo "Running code quality checks with ruff..."
+python -m ruff check .
+python -m ruff format --check .
+
+if ((${#pytest_args[@]})); then
+	python -m pytest "${pytest_args[@]}"
+else
+	python -m pytest
+fi

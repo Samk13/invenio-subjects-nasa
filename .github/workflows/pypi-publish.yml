@@ -29,11 +29,15 @@ jobs:
     steps:
     - name: Checkout
       uses: actions/checkout@v5
-    - name: Install dependencies
-      run: |
-        pip install twine
-    - name: Run package build
-      run: |
-        python setup.py sdist
+    - name: Install uv and Python
+      uses: astral-sh/setup-uv@v6
+      with:
+        version: "0.8.17"
+        python-version: "3.12"
+        enable-cache: true
+    - name: Build package
+      run: rm -rf dist && uvx --from build pyproject-build
+    - name: Check package metadata
+      run: uvx --from twine twine check dist/*
     - name: Publish package to PyPI
       uses: pypa/gh-action-pypi-publish@release/v1

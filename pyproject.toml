@@ -1,0 +1,97 @@
+[project]
+name = "invenio-subjects-nasa"
+dynamic = ["version"]
+description = "invenio_subjects_nasa vocabularies"
+readme = {file = "README.md", content-type = "text/markdown"}
+keywords = ["invenio", "vocabularies", "nasa"]
+license = {text = "MIT"}
+authors = [
+    {name = "KTH Royal Institute of Technology", email = "info@kth.se"}
+]
+requires-python = ">=3.9"
+classifiers = [
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+]
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.version]
+path = "invenio_subjects_nasa/__init__.py"
+
+[project.urls]
+Homepage = "https://github.com/Samk13/invenio-subjects-nasa"
+Repository = "https://github.com/Samk13/invenio-subjects-nasa"
+Issues = "https://github.com/Samk13/invenio-subjects-nasa/issues"
+
+[project.optional-dependencies]
+tests = [
+    "pytest>=7.0.0",
+    "pytest-invenio>=2.1.7",
+    "PyYAML>=6.0.1",
+    "wheel>=0.42.0",
+    "ruff>=0.1.0",
+]
+
+[project.scripts]
+invenio-subjects-nasa = "main:main"
+
+[project.entry-points."invenio_rdm_records.fixtures"]
+invenio_subjects_nasa = "invenio_subjects_nasa.vocabularies"
+
+[tool.ruff]
+target-version = "py39"
+line-length = 88
+
+[tool.ruff.lint]
+select = [
+    "E",   # pycodestyle errors
+    "W",   # pycodestyle warnings
+    "F",   # pyflakes
+    "I",   # isort
+    "B",   # flake8-bugbear
+    "C4",  # flake8-comprehensions
+    "D",   # pydocstyle
+    "UP",  # pyupgrade
+    "SIM", # flake8-simplify
+]
+ignore = [
+    "D100", # Missing docstring in public module
+    "D401", # First line should be in imperative mood
+    "E501", # Line too long (handled by formatter)
+]
+
+[tool.ruff.format]
+quote-style = "double"
+indent-style = "space"
+skip-magic-trailing-comma = false
+line-ending = "auto"
+
+[tool.ruff.lint.isort]
+known-first-party = ["invenio_subjects_nasa"]
+force-single-line = false
+combine-as-imports = true
+
+[tool.ruff.lint.pydocstyle]
+convention = "pep257"
+
+[tool.pytest.ini_options]
+addopts = "--doctest-glob='*.rst' --doctest-modules"
+filterwarnings = ["ignore::pytest.PytestDeprecationWarning"]
+testpaths = ["tests", "invenio_subjects_nasa"]
+
+[tool.check-manifest]
+ignore = [
+    ".*-requirements.txt",
+    "*.bin",
+    "*.gitkeep",
+]

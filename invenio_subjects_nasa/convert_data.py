@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 #
 # Copyright (C) 2022-2024 KTH Royal Institute of Technology.
 #
@@ -35,7 +34,7 @@ def load_csv_data(filepath: str):
             for row in reader:
                 yield from parse_single_string_row(row[0])
                 # yield tuple(row[0].replace('"', '').split(','))
-    except IOError as io_err:
+    except OSError as io_err:
         # Handle file access errors (e.g., file not found, permission denied)
         logger.debug("File access error: '%s'", io_err)
     except csv.Error as csv_err:
@@ -54,7 +53,7 @@ def parse_single_string_row(row: str):
 
     for parsed_row in reader:
         # parsed_row = ['64538', '2001 Mars Odyssey', 'NASA Thesaurus', 'BT', '55662', 'Mars missions', 'NASA Thesaurus']
-        if not len(parsed_row) == 7:
+        if len(parsed_row) != 7:
             logger.debug("Row length is not 7: '%s'", parsed_row)
         yield tuple(parsed_row)
         return  # Ensures the function exits after yielding
