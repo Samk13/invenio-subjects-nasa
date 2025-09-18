@@ -6,4 +6,4 @@
 
 """Nasa thesaurus subject terms for InvenioRDM."""
 
-__version__ = "2.0.2"
+__version__ = "2.1.0"
